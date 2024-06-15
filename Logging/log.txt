@@ -1,0 +1,8 @@
+Info: 2024/06/15 15:46:25 log.go:33: start main func
+warning: 2024/06/15 15:46:25 log.go:46: sum numbers : 5 , 6 
+Info: 2024/06/15 15:46:25 log.go:47: end sum func
+Error: 2024/06/15 15:46:25 log.go:42: Manual error with panic
+Info: 2024/06/15 15:49:06 log.go:33: start main func
+warning: 2024/06/15 15:49:06 log.go:46: sum numbers : 5 , 6 
+Info: 2024/06/15 15:49:06 log.go:47: end sum func
+Error: 2024/06/15 15:49:06 log.go:42: Manual error with panic
