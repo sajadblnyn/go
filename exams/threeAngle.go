@@ -4,32 +4,25 @@ import "fmt"
 
 func main() {
 	var n int
-
 	fmt.Scanln(&n)
 
-	var div int = n / 2
+	count := 0
+	for a := 1; a <= n/3; a++ {
+		minX := max(0, (n/2)-2*a+1)
+		maxX := (n - 3*a) / 2
 
-	var a, b, c int
-
-	arr := map[int][]int{}
-
-	for i := 1; i <= div; i++ {
-		a = i
-		b = i
-		c = n - (a + b)
-
-		if (a+b) > c && (c+b) > a && (a+c) > b {
-			arr[a*b*c] = []int{a, b, c}
-		}
-
-		a = i
-		b = i + 1
-		c = n - (a + b)
-
-		if (a+b) > c && (c+b) > a && (a+c) > b {
-			arr[a*b*c] = []int{a, b, c}
+		fmt.Printf("minx:%d , maxx:%d\n", minX, maxX)
+		if minX <= maxX {
+			count += maxX - minX + 1
 		}
 	}
 
-	fmt.Println(len(arr))
+	fmt.Println(count)
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
