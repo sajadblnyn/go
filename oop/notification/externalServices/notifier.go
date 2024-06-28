@@ -8,7 +8,7 @@ const (
 )
 
 type Notifier interface {
-	SendNotify(reciver string, notify_type string, message string)
+	SendNotify(reciver string, notify_type NotificationType, message string)
 }
 
 func NewNotifier() Notifier {
